@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Cozy Family</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <main id="game">
+    <canvas id="scene"></canvas>
+    <header class="topbar">
+      <button class="brand" id="brand"><span class="brand-mark">⌂</span><span>COZY <b>FAMILY</b></span></button>
+      <div class="day-pill"><span id="weather">☀</span><div><small id="dayLabel">SATURDAY</small><strong id="clock">8:30 AM</strong></div></div>
+      <div class="top-actions"><button class="icon-btn" id="soundBtn" aria-label="Sound">♪</button><button class="icon-btn" id="menuBtn" aria-label="Menu">≡</button></div>
+    </header>
+
+    <aside class="mission-card">
+      <div class="mission-head"><span><i></i> TODAY'S GOALS</span><b id="goalCount">0/4</b></div>
+      <div id="goals"></div>
+    </aside>
+
+    <aside class="family-panel">
+      <div class="family-title">FAMILY <button id="focusHome" title="Focus house">⌂</button></div>
+      <div id="familyList"></div>
+    </aside>
+
+    <section class="stats" id="stats"></section>
+
+    <div id="toast" class="toast"></div>
+    <div id="prompt" class="prompt"><kbd>E</kbd><span>Interaction</span></div>
+
+    <div class="bottom-controls">
+      <button id="interactBtn" class="action-btn"><b>E</b><span>Interact</span></button>
+      <div class="move-pad" id="movePad">
+        <button data-key="w">▲</button><button data-key="a">◀</button><button data-key="s">▼</button><button data-key="d">▶</button>
+      </div>
+    </div>
+
+    <div class="modal hidden" id="menuModal"><div class="modal-card"><h2>Paused</h2><p>Take a break with the family.</p><button id="resumeBtn">Resume</button><button id="resetBtn" class="secondary">Restart day</button></div></div>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
